@@ -1,0 +1,43 @@
+.timer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.timer-label {
+  font-size: 14px;
+  color: #000000;
+}
+
+.timer-value {
+  font-size: 20px;
+  font-family: 'Courier New', monospace;
+  color: #000000;
+}
+
+.timer.warning .timer-value {
+  color: #ff6b00;
+}
+
+.timer.critical {
+  border-color: #ff0000;
+  animation: pulse 1s infinite;
+}
+
+.timer.critical .timer-value {
+  color: #ff0000;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
